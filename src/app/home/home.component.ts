@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core' 
 
-import { AppState } from '../app.service';
-import { Title } from './title';
-import { XLarge } from './x-large';
+import { AppState } from '../app.service' 
+import { Title } from './title' 
+import { XLarge } from './x-large' 
 import { UserService } from "app/services"
 
 @Component({
@@ -21,7 +21,7 @@ import { UserService } from "app/services"
 })
 export class Home {
   // Set our default values
-  localState = { value: '' };
+  localState = { value: '' } 
   userName = ""
   // TypeScript public modifiers
   constructor(public appState: AppState,
@@ -31,13 +31,13 @@ export class Home {
   }
 
   ngOnInit() {
-    console.log('hello `Home` component');
-    // this.title.getData().subscribe(data => this.data = data);
+    console.log('hello `Home` component') 
+    // this.title.getData().subscribe(data => this.data = data) 
   }
 
   submitState(value: string) {
-    console.log('submitState', value);
-    this.appState.set('value', value);
-    this.localState.value = '';
+    console.log('submitState', value) 
+    this.appState.set('value', value) 
+    this.localState.value = '' 
   }
 }

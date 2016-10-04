@@ -1,9 +1,9 @@
 /*
  * Angular 2 decorators and services
  */
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core' 
 
-import { AppState } from './app.service';
+import { AppState } from './app.service' 
 
 /*
  * App Component
@@ -59,9 +59,9 @@ import { AppState } from './app.service';
   `
 })
 export class AppComponent {
-  angularclassLogo = 'assets/img/angularclass-avatar.png';
-  name = 'Angular 2 Webpack Starter';
-  url = 'https://twitter.com/AngularClass';
+  angularclassLogo = 'assets/img/angularclass-avatar.png' 
+  name = 'Angular 2 Webpack Starter' 
+  url = 'https://twitter.com/AngularClass' 
 
   constructor(
     public appState: AppState) {
@@ -69,7 +69,7 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    console.log('Initial App State', this.appState.state);
+    console.log('Initial App State', this.appState.state) 
   }
 
 }

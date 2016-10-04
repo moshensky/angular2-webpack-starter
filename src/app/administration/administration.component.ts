@@ -1,6 +1,6 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from "@angular/core" 
 
-import { UserService } from "app/services";
+import { UserService } from "app/services" 
 
 @Component({
   moduleId: module.id,
@@ -12,17 +12,17 @@ import { UserService } from "app/services";
   styleUrls: []
 })
 export class AdministrationComponent implements OnInit {
-  msg = "Loading data...";
-  userName = "";
+  msg = "Loading data..." 
+  userName = "" 
   constructor(userService: UserService) {
-    this.userName = userService.userName;
+    this.userName = userService.userName 
   }
 
   ngOnInit() {
   }
 
   displayMessage(msg: string) {
-    this.msg = msg;
-    setTimeout(() => this.msg = "", 1500);
+    this.msg = msg 
+    setTimeout(() => this.msg = "", 1500) 
   }
 }

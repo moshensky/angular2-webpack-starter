@@ -1,9 +1,9 @@
-import { ActivatedRoute, Data } from '@angular/router' 
-import { Component } from '@angular/core' 
-import { inject, TestBed } from '@angular/core/testing' 
+import { ActivatedRoute, Data } from '@angular/router';
+import { Component } from '@angular/core';
+import { inject, TestBed } from '@angular/core/testing';
 
 // Load the implementations that should be tested
-import { About } from './about.component' 
+import { About } from './about.component';
 
 describe('About', () => {
   // provide our implementations or mocks to the dependency injector
@@ -22,14 +22,14 @@ describe('About', () => {
       },
       About
     ]
-  })) 
+  }));
 
   it('should log ngOnInit', inject([About], (about: About) => {
-    spyOn(console, 'log') 
-    expect(console.log).not.toHaveBeenCalled() 
+    spyOn(console, 'log');
+    expect(console.log).not.toHaveBeenCalled();
 
-    about.ngOnInit() 
-    expect(console.log).toHaveBeenCalled() 
-  })) 
+    about.ngOnInit();
+    expect(console.log).toHaveBeenCalled();
+  }));
 
-}) 
+});

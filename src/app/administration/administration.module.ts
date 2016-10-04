@@ -1,8 +1,8 @@
-import { NgModule } from "@angular/core"
-import { CommonModule } from "@angular/common"
-import { ReactiveFormsModule, FormsModule } from "@angular/forms"
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 
-import { AdministrationComponent } from "./administration.component"
+import { AdministrationComponent } from "./administration.component";
 
 @NgModule({
   imports: [

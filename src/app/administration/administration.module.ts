@@ -3,12 +3,14 @@ import { CommonModule } from "@angular/common";
 import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 
 import { AdministrationComponent } from "./administration.component";
+import { routing } from "./administration.routing"
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    routing
   ],
   declarations: [
     AdministrationComponent

@@ -20,10 +20,14 @@ export class AdministrationComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.displayMessage("fuck off");
   }
 
   displayMessage(msg: string) {
     this.msg = msg;
-    setTimeout(() => this.msg = "", 1500);
+    setTimeout(() => {
+      this.msg = ""
+      console.log("end")
+    }, 1500);
   }
 }

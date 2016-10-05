@@ -1,7 +1,6 @@
 import { NgModule, ApplicationRef } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
 import { FormsModule } from '@angular/forms'
-import { HttpModule } from '@angular/http'
 import { RouterModule } from '@angular/router'
 import { removeNgStyles, createNewHosts, createInputTransfer } from '@angularclass/hmr'
 
@@ -14,14 +13,17 @@ import { routing } from './app.routing'
 import { AppComponent } from './app.component'
 import { APP_RESOLVER_PROVIDERS } from './app.resolver'
 import { AppState, InteralStateType } from './app.service'
+
+// todo: refactore to modules
 import { Home } from './home'
 import { About } from './about'
 import { NoContent } from './no-content'
 import { XLarge } from './home/x-large'
 import { HighlightDirective } from "./shared/highlight.directive"
 
-import { UserService } from "./services"
+/* Feature Modules */
 import { SharedModule } from "./shared"
+import { CoreModule } from "./core"
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -46,19 +48,16 @@ type StoreType = {
     Home,
     NoContent,
     XLarge,
-    //HighlightDirective
   ],
   imports: [ // import Angular's modules
     BrowserModule,
-    FormsModule,
-    HttpModule,
     routing,
     SharedModule,
+    CoreModule
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
     ENV_PROVIDERS,
     APP_PROVIDERS,
-    UserService
   ]
 })
 export class AppModule {

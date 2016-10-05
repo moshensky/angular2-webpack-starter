@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 
-import { UserService } from "app/services";
+import { UserService } from "app/core";
 
 @Component({
   moduleId: module.id,

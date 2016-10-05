@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core"
 import { CommonModule } from "@angular/common"
-import { FormsModule } from "@angular/forms"
+import { ReactiveFormsModule, FormsModule } from "@angular/forms"
+import { HttpModule } from '@angular/http'
 
 //import { FilterTextComponent } from './filter-text/filter-text.component';
 //import { FilterTextService } from './filter-text/filter-text.service';
@@ -8,7 +9,7 @@ import { FormsModule } from "@angular/forms"
 import { HighlightDirective } from "./highlight.directive"
 
 @NgModule({
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule],
   declarations: [
     HighlightDirective
     //FilterTextComponent,
@@ -19,7 +20,9 @@ import { HighlightDirective } from "./highlight.directive"
   ],
   exports: [
     CommonModule,
+    HttpModule,
     FormsModule,
+    ReactiveFormsModule,
     HighlightDirective
     //FilterTextComponent,
     //InitCapsPipe

@@ -2,8 +2,16 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 
-import { AdministrationComponent } from "./administration.component";
 import { routing } from "./administration.routing"
+
+import { AdministrationComponent } from "./administration.component"
+
+//import {
+  //AdministrationComponent,
+  //EFormsComponent,
+  //UsersComponent,
+  //HistoryComponent
+//} from "./index"
 
 @NgModule({
   imports: [
@@ -13,7 +21,10 @@ import { routing } from "./administration.routing"
     routing
   ],
   declarations: [
-    AdministrationComponent
+    AdministrationComponent,
+    //EFormsComponent,
+    //UsersComponent,
+    //HistoryComponent
   ],
   exports: [
     //ContactComponent

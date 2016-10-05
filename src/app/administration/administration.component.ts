@@ -6,8 +6,9 @@ import { UserService } from "app/services";
   moduleId: module.id,
   selector: "md-administration",
   templateUrl: `
-    <h1>{{userName}}</h1>
+    <h1>Welcome {{userName}} to administration!</h1>
     <div *ngIf="msg" class="msg">{{msg}}</div>
+    <router-outlet></router-outlet>
   `,
   styleUrls: []
 })

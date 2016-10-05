@@ -10,11 +10,11 @@ import { EFormsComponent } from "./eforms/eforms.component"
 import { UsersComponent } from "./users/users.component"
 import { HistoryComponent } from "./history/history.component"
 
-console.log('`Administration module` bundle loaded asynchronously');
+console.log('`Administration module` bundle loaded asynchronously!');
 
 @NgModule({
   imports: [
-    SharedModule,
+    //SharedModule,
     RouterModule.forChild(routes),
   ],
   declarations: [
@@ -33,3 +33,4 @@ console.log('`Administration module` bundle loaded asynchronously');
 export default class AdministrationModule {
   static routes = routes
 }
+

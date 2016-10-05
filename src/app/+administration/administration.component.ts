@@ -6,7 +6,7 @@ import { UserService } from "app/core";
   moduleId: module.id,
   selector: "md-administration",
   templateUrl: `
-    <h1>Welcome {{userName}} to administration!</h1>
+    <h1 highlight>Welcome {{userName}} to administration!</h1>
     <div *ngIf="msg" class="msg">{{msg}}</div>
     <router-outlet></router-outlet>
   `,
@@ -20,7 +20,7 @@ export class AdministrationComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.displayMessage("fuck off");
+    this.displayMessage("fuck off :)");
   }
 
   displayMessage(msg: string) {

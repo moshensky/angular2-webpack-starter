@@ -1,13 +1,12 @@
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import {SharedModule} from "app/shared"
 
 import { Detail } from './detail.component';
 
 import {routes} from "./detail.routing"
 
-console.log('`Detail` bundle loaded asynchronously');
+console.log('`Detail` bundle loaded asynchronously!');
 
 @NgModule({
   declarations: [
@@ -15,8 +14,7 @@ console.log('`Detail` bundle loaded asynchronously');
     Detail
   ],
   imports: [
-    CommonModule,
-    FormsModule,
+    SharedModule,
     RouterModule.forChild(routes),
   ]
 })

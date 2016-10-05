@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router"
+
+import { SharedModule } from "app/shared"
 
 import { routes } from "./administration.routing"
 
@@ -14,9 +14,7 @@ console.log('`Administration module` bundle loaded asynchronously');
 
 @NgModule({
   imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
+    SharedModule,
     RouterModule.forChild(routes),
   ],
   declarations: [

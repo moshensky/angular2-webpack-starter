@@ -8,7 +8,9 @@ import { CommonModule } from '@angular/common';
 import { UserService } from './services';
 
 @NgModule({
-  imports: [CommonModule],
+  imports: [
+    CommonModule
+  ],
   declarations: [
     //TitleComponent,
   ],

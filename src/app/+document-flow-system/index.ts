@@ -1,7 +1,5 @@
 import { NgModule } from "@angular/core";
-
 import { SharedModule } from "app/shared"
-
 import { routing, routes } from "./document-flow-system.routing"
 
 import { DocumentFlowSystemComponent } from "./document-flow-system.component"

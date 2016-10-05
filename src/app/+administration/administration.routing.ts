@@ -9,7 +9,6 @@ import { HistoryComponent } from "./history/history.component"
 export const routes: Routes = [{
   path: "",
   component: AdministrationComponent,
-  //pathMatch: "full",
   children: [
     { path: "", redirectTo: "e-forms" },
     { path: "e-forms", component: EFormsComponent },

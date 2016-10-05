@@ -1,4 +1,4 @@
-export * from "./administration.module"
+export { AdministrationModule } from "./administration.module"
 
 //export { AdministrationComponent } from "./administration.component"
 //export { EFormsComponent } from "./eforms/eforms.component"

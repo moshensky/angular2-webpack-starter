@@ -5,13 +5,9 @@ import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 import { routing } from "./administration.routing"
 
 import { AdministrationComponent } from "./administration.component"
-
-//import {
-  //AdministrationComponent,
-  //EFormsComponent,
-  //UsersComponent,
-  //HistoryComponent
-//} from "./index"
+import { EFormsComponent } from "./eforms/eforms.component"
+import { UsersComponent } from "./users/users.component"
+import { HistoryComponent } from "./history/history.component"
 
 @NgModule({
   imports: [
@@ -22,9 +18,9 @@ import { AdministrationComponent } from "./administration.component"
   ],
   declarations: [
     AdministrationComponent,
-    //EFormsComponent,
-    //UsersComponent,
-    //HistoryComponent
+    EFormsComponent,
+    UsersComponent,
+    HistoryComponent
   ],
   exports: [
     //ContactComponent

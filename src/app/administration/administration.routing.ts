@@ -10,6 +10,7 @@ export const routing: ModuleWithProviders = RouterModule.forChild([{
   path: "administration",
   component: AdministrationComponent,
   children: [
+    { path: "", redirectTo: "e-forms" },
     { path: "e-forms", component: EFormsComponent },
     { path: "users", component: UsersComponent },
     { path: "history", component: HistoryComponent },

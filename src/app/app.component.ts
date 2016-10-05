@@ -36,6 +36,10 @@ import { AppState } from './app.service';
       <span>
         <a [routerLink]=" ['./administration'] "> Administration </a>
       </span>
+      |
+      <span>
+        <a [routerLink]=" ['./document-flow-system'] "> Document Flow System </a>
+      </span>
     </nav>
 
     <main>

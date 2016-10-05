@@ -9,14 +9,13 @@ import { HttpModule } from '@angular/http'
 import { HighlightDirective } from "./highlight.directive"
 
 @NgModule({
-  imports: [CommonModule],
+  imports: [
+    CommonModule
+  ],
   declarations: [
     HighlightDirective
     //FilterTextComponent,
     //InitCapsPipe
-  ],
-  providers: [
-    //FilterTextService
   ],
   exports: [
     CommonModule,

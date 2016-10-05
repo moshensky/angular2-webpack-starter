@@ -1,6 +1,5 @@
 import { NgModule, ApplicationRef } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
-import { RouterModule } from '@angular/router'
 import { removeNgStyles, createNewHosts, createInputTransfer } from '@angularclass/hmr'
 
 /*
@@ -14,6 +13,7 @@ import { APP_RESOLVER_PROVIDERS } from './app.resolver'
 import { AppState, InteralStateType } from './app.service'
 
 // todo: refactore to modules
+import {SharedModule} from "app/shared"
 import { Home } from './home'
 import { About } from './about'
 import { NoContent } from './no-content'
@@ -21,7 +21,6 @@ import { XLarge } from './home/x-large'
 import { HighlightDirective } from "./shared/highlight.directive"
 
 /* Feature Modules */
-import { SharedModule } from "./shared"
 import { CoreModule } from "./core"
 
 // Application wide providers
@@ -52,8 +51,8 @@ type StoreType = {
   imports: [ // import Angular's modules
     BrowserModule,
     routing,
-    SharedModule,
-    CoreModule
+    CoreModule,
+    SharedModule
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
     ENV_PROVIDERS,

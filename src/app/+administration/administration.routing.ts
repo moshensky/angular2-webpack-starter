@@ -1,3 +1,4 @@
+import { Routes, RouterModule } from "@angular/router"
 import { ModuleWithProviders } from "@angular/core"
 
 import { AdministrationComponent } from "./administration.component"
@@ -5,7 +6,7 @@ import { EFormsComponent } from "./eforms/eforms.component"
 import { UsersComponent } from "./users/users.component"
 import { HistoryComponent } from "./history/history.component"
 
-export const routes = [{
+export const routes: Routes = [{
   path: "",
   component: AdministrationComponent,
   //pathMatch: "full",
@@ -16,3 +17,5 @@ export const routes = [{
     { path: "history", component: HistoryComponent },
   ]
 }]
+
+export const routing: ModuleWithProviders = RouterModule.forChild(routes)

@@ -1,9 +1,8 @@
 import { NgModule } from "@angular/core";
-import { RouterModule } from "@angular/router"
 
 import { SharedModule } from "app/shared"
 
-import { routes } from "./administration.routing"
+import { routing, routes } from "./administration.routing"
 
 import { AdministrationComponent } from "./administration.component"
 import { EFormsComponent } from "./eforms/eforms.component"
@@ -15,16 +14,13 @@ console.log('`Administration module` bundle loaded asynchronously!');
 @NgModule({
   imports: [
     SharedModule,
-    RouterModule.forChild(routes),
+    routing
   ],
   declarations: [
     AdministrationComponent,
     EFormsComponent,
     UsersComponent,
     HistoryComponent
-  ],
-  exports: [
-    //ContactComponent
   ],
   providers: [
     //ContactService

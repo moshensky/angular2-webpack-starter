@@ -22,7 +22,6 @@ import { HighlightDirective } from "./shared/highlight.directive"
 
 import { UserService } from "./services"
 import { SharedModule } from "./shared"
-import { AdministrationModule } from "./administration"
 
 // Application wide providers
 const APP_PROVIDERS = [
@@ -55,7 +54,6 @@ type StoreType = {
     HttpModule,
     routing,
     SharedModule,
-    AdministrationModule
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
     ENV_PROVIDERS,

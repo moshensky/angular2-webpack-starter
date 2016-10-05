@@ -12,8 +12,8 @@ export const routes: Routes = [
   { path: "",      component: Home },
   { path: "home",  component: Home },
   { path: "about", component: About },
-  //{ path: "administration", loadChildren: () => System.import("./administration/administration.module") },
-  { path: "detail", loadChildren: () => System.import("./+detail") },
+  { path: "administration", loadChildren: () => System.import("./+administration") },
+  { path: "detail", loadChildren: () => System.import("./+detail/detail.module") },
   { path: "**",    component: NoContent },
 ]
 

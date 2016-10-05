@@ -1,20 +1,23 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { ReactiveFormsModule, FormsModule } from "@angular/forms";
+import { RouterModule } from "@angular/router"
 
-import { routing } from "./administration.routing"
+import { routes } from "./administration.routing"
 
 import { AdministrationComponent } from "./administration.component"
 import { EFormsComponent } from "./eforms/eforms.component"
 import { UsersComponent } from "./users/users.component"
 import { HistoryComponent } from "./history/history.component"
 
+console.log('`Administration module` bundle loaded asynchronously');
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    routing
+    RouterModule.forChild(routes),
   ],
   declarations: [
     AdministrationComponent,
@@ -29,4 +32,6 @@ import { HistoryComponent } from "./history/history.component"
     //ContactService
   ]
 })
-export class AdministrationModule { }
+export default class AdministrationModule {
+  static routes = routes
+}

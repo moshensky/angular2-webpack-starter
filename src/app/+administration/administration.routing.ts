@@ -10,7 +10,7 @@ export const routes: Routes = [{
   path: "",
   component: AdministrationComponent,
   children: [
-    { path: "", redirectTo: "e-forms" },
+    { path: "", redirectTo: "e-forms", pathMatch: "full" },
     { path: "e-forms", component: EFormsComponent },
     { path: "users", component: UsersComponent },
     { path: "history", component: HistoryComponent },

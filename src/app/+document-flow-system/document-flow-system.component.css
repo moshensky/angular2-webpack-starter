@@ -81,6 +81,7 @@
   margin-right: 15px;
   padding-top: 5px;
   padding-bottom: 2px;
+  cursor: pointer;
 }
 
 .nav-top ul li.ui-tabmenuitem.ui-state-default.ui-corner-top a {

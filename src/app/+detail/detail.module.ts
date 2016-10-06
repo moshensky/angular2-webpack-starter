@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import {SharedModule} from "app/shared"
+import { SharedModule } from "app/shared"
+import { routing, routes } from "./detail.routing"
 
-import { Detail } from './detail.component';
+import { DetailComponent } from './detail.component';
+import { XComponent } from "./x/x.component"
 
-import {routes} from "./detail.routing"
 
 console.log('`Detail` bundle loaded asynchronously!');
 
 @NgModule({
-  declarations: [
-    // Components / Directives/ Pipes
-    Detail
-  ],
   imports: [
     SharedModule,
-    RouterModule.forChild(routes),
+    routing
+  ],
+  declarations: [
+    DetailComponent,
+    XComponent
   ]
 })
 export class DetailModule {

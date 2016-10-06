@@ -2,13 +2,13 @@ import { Component, OnInit } from "@angular/core";
 
 @Component({
   //moduleId: module.id,
-  selector: "md-eforms",
+  selector: 'md-eforms',
   templateUrl: `
-    <h1>EForms</h1>
+    <h1>XXX</h1>
   `
 })
-export class EformsComponent implements OnInit {
+export class XComponent  implements OnInit {
   ngOnInit() {
-    console.log("md-eforms loaded")
+    console.log("XXX loaded!")
   }
 }

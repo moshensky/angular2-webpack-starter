@@ -1,6 +1,11 @@
-import { Detail } from './detail.component';
+import { Routes, RouterModule } from "@angular/router"
+import { ModuleWithProviders } from "@angular/core"
 
-// async components must be named routes for WebpackAsyncRoute
-export const routes = [
-  { path: '', component: Detail, pathMatch: 'full' }
+import { DetailComponent } from "./detail.component";
+import { XComponent } from "./x/x.component"
+
+export const routes: Routes = [
+  { path: "", component: DetailComponent }
 ];
+
+export const routing: ModuleWithProviders = RouterModule.forChild(routes)

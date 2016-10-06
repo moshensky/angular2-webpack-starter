@@ -17,7 +17,6 @@ import {SharedModule} from "app/shared"
 import { Home } from './home'
 import { NoContent } from './no-content'
 import { XLarge } from './home/x-large'
-import { HighlightDirective } from "./shared/highlight.directive"
 
 /* Feature Modules */
 import { CoreModule } from "./core"

@@ -2,7 +2,7 @@ import { Routes, RouterModule } from "@angular/router"
 import { ModuleWithProviders } from "@angular/core"
 
 import { AdministrationComponent } from "./administration.component"
-import { EFormsComponent } from "./eforms/eforms.component"
+import { EformsComponent } from "./eforms/eforms.component"
 import { UsersComponent } from "./users/users.component"
 import { HistoryComponent } from "./history/history.component"
 
@@ -11,7 +11,7 @@ export const routes: Routes = [{
   component: AdministrationComponent,
   children: [
     { path: "", redirectTo: "e-forms", pathMatch: "full" },
-    { path: "e-forms", component: EFormsComponent },
+    { path: "e-forms", component: EformsComponent },
     { path: "users", component: UsersComponent },
     { path: "history", component: HistoryComponent },
   ]

@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 
 @Component({
-  moduleId: module.id,
+  //moduleId: module.id,
   selector: "md-history",
   templateUrl: `
     <h1>History</h1>

@@ -5,7 +5,7 @@ import {
 import { CommonModule } from '@angular/common';
 
 //import { TitleComponent }    from './title.component';
-import { UserService, AuthGuard } from './services';
+import { UserService, AuthGuard, AuthService } from './services';
 
 @NgModule({
   imports: [
@@ -19,7 +19,8 @@ import { UserService, AuthGuard } from './services';
   ],
   providers: [
     UserService,
-    AuthGuard
+    AuthGuard,
+    AuthService
   ]
 })
 export class CoreModule {

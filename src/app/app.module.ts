@@ -15,6 +15,7 @@ import { AppState, InteralStateType } from './app.service'
 
 import {SharedModule} from "app/shared"
 import { NoContent } from './no-content'
+import { LoginComponent } from "./login"
 
 /* Feature Modules */
 import { CoreModule } from "./core"
@@ -39,6 +40,7 @@ type StoreType = {
   declarations: [
     AppComponent,
     NoContent,
+    LoginComponent
   ],
   imports: [ // import Angular's modules
     BrowserModule,

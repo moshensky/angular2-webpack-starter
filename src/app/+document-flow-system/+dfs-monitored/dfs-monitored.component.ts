@@ -3,14 +3,13 @@ import { Component, OnInit } from "@angular/core";
 import { UserService } from "app/core";
 
 @Component({
-  selector: "md-dfs-search",
+  selector: "md-dfs-monitored",
   templateUrl: `
-    <h1 highlight>Welcome {{userName}} to document flow system search - search!</h1>
-    <div *ngIf="msg" class="msg">{{msg}}</div>
+    <h1 highlight>Monitored</h1>
   `,
-  styleUrls: ["./dfs-search.component.css"]
+  styleUrls: ["./dfs-monitored.component.css"]
 })
-export class DFSSearchComponent implements OnInit {
+export class DFSMonitoredComponent implements OnInit {
   msg = "Loading data...";
   userName = "";
   /*

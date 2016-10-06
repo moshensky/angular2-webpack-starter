@@ -1,1 +1,1 @@
-export { DFSSearchModule } from "./dfs-search.module"
+export { DFSNotesModule } from "./dfs-notes.module"

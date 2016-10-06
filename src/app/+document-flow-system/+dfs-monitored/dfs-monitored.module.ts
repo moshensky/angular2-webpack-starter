@@ -2,7 +2,7 @@ import { NgModule } from "@angular/core";
 import { SharedModule } from "app/shared"
 import { routing, routes } from "./dfs-search.routing"
 
-import { DFSSearchComponent } from "./dfs-search.component"
+import { DFSMonitoredComponent } from "./dfs-monitored.component"
 
 console.log('`Document flow system search module` bundle loaded asynchronously!');
 
@@ -12,11 +12,11 @@ console.log('`Document flow system search module` bundle loaded asynchronously!'
     routing
   ],
   declarations: [
-    DFSSearchComponent
+    DFSMonitoredComponent
   ],
   providers: [
   ]
 })
-export class DFSSearchModule {
+export class DFSMonitoredModule {
   static routes = routes
 }

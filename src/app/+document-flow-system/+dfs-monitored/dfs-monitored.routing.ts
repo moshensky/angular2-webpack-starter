@@ -2,11 +2,11 @@ import { Routes, RouterModule } from "@angular/router"
 import { ModuleWithProviders } from "@angular/core"
 
 
-import { DFSSearchComponent } from "./dfs-search.component"
+import { DFSMonitoredComponent } from "./dfs-monitored.component"
 
 export const routes: Routes = [{
   path: "",
-  component: DFSSearchComponent,
+  component: DFSMonitoredComponent,
 }]
 
 

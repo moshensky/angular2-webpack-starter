@@ -3,14 +3,13 @@ import { Component, OnInit } from "@angular/core";
 import { UserService } from "app/core";
 
 @Component({
-  selector: "md-dfs-search",
+  selector: "md-dfs-notes",
   templateUrl: `
-    <h1 highlight>Welcome {{userName}} to document flow system search - search!</h1>
-    <div *ngIf="msg" class="msg">{{msg}}</div>
+    <h1 highlight>Notes</h1>
   `,
-  styleUrls: ["./dfs-search.component.css"]
+  styleUrls: ["./dfs-notes.component.css"]
 })
-export class DFSSearchComponent implements OnInit {
+export class DFSNotesComponent implements OnInit {
   msg = "Loading data...";
   userName = "";
   /*

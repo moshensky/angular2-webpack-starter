@@ -11,7 +11,7 @@ export const routes: Routes = [{
   children: [
     //{ path: "", redirectTo: "search", pathMatch: "full" },
     { path: "", redirectTo: "search" },
-    { path: "search", loadChildren: () => System.import("./+dfs-search") },
+    { path: "search", loadChildren: "./+dfs-search#DFSSearchModule" },
     //{ path: "search", component: SearchComponent },
   ]
 }]

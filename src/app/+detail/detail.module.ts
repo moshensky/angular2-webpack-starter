@@ -18,6 +18,6 @@ console.log('`Detail` bundle loaded asynchronously!');
     RouterModule.forChild(routes),
   ]
 })
-export default class AboutModule {
+export class DetailModule {
   static routes = routes;
 }

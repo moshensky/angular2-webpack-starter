@@ -14,7 +14,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
 const HtmlElementsPlugin = require('./html-elements-plugin');
 const AssetsPlugin = require('assets-webpack-plugin');
-const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin'); 
+const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin');
 
 /*
  * Webpack Constants
@@ -95,7 +95,7 @@ module.exports = function(options) {
        * An array of applied pre and post loaders.
        *
        * See: http://webpack.github.io/docs/configuration.html#module-preloaders-module-postloaders
-       */
+       *
       preLoaders: [
         {
           test: /\.ts$/,
@@ -132,7 +132,8 @@ module.exports = function(options) {
           loaders: [
             '@angularclass/hmr-loader?pretty=' + !isProd + '&prod=' + isProd,
             'awesome-typescript-loader',
-            'angular2-template-loader'
+            'angular2-template-loader',
+            'angular2-router-loader?loader=system'
           ],
           exclude: [/\.(spec|e2e)\.ts$/]
         },
@@ -223,7 +224,7 @@ module.exports = function(options) {
       /**
        * Plugin: ContextReplacementPlugin
        * Description: Provides context to Angular's use of System.import
-       * 
+       *
        * See: https://webpack.github.io/docs/list-of-plugins.html#contextreplacementplugin
        * See: https://github.com/angular/angular/issues/11580
        */

@@ -15,7 +15,6 @@ import { AppState, InteralStateType } from './app.service'
 // todo: refactore to modules
 import {SharedModule} from "app/shared"
 import { Home } from './home'
-import { About } from './about'
 import { NoContent } from './no-content'
 import { XLarge } from './home/x-large'
 import { HighlightDirective } from "./shared/highlight.directive"
@@ -43,7 +42,6 @@ type StoreType = {
   declarations: [
     AppComponent,
     // todo: remove!!!
-    About,
     Home,
     NoContent,
     XLarge,

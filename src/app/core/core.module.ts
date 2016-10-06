@@ -1,13 +1,15 @@
 import {
   ModuleWithProviders, NgModule,
   Optional, SkipSelf
-} from '@angular/core';
-import { CommonModule } from '@angular/common';
+} from "@angular/core"
+import { CommonModule } from "@angular/common"
 
-//import { TitleComponent }    from './title.component';
-import { UserService, AuthGuard, AuthService, CanDeactivateGuard,
-  SpinnerService
-} from './services';
+import {
+  UserService, AuthGuard, AuthService, CanDeactivateGuard,
+  SpinnerService, StoreService, ApiService
+} from "./services"
+
+import { Store } from "./store"
 
 @NgModule({
   imports: [
@@ -24,7 +26,10 @@ import { UserService, AuthGuard, AuthService, CanDeactivateGuard,
     AuthGuard,
     AuthService,
     CanDeactivateGuard,
-    SpinnerService
+    SpinnerService,
+    StoreService,
+    Store,
+    ApiService
   ]
 })
 export class CoreModule {

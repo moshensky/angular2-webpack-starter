@@ -9,7 +9,7 @@ import { AuthService } from "app/core"
           <div class="error" [hidden]="email.valid || email.pristine">email is invalid</div>
           <input type="password" name="password" placeholder="password" required [(ngModel)]="user.password" #password="ngModel">
           <div class="error" [hidden]="password.valid || password.pristine">password is required</div>
-          <button [disabled]="!authForm.form.valid" type="submit">
+          <button [disabled]="!authForm.form.valid" type="submit">Submit</button>
       </form>
     </div>
     `

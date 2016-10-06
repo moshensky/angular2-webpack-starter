@@ -11,7 +11,7 @@ export class ApiService {
     'Content-Type': 'application/json',
     Accept: 'application/json'
   });
-  api_url: string = 'http://localhost:3500';
+  api_url: string = API_URL
 
   constructor(private http: Http) { }
 
@@ -38,9 +38,7 @@ export class ApiService {
   }
 
   post(path: string, body): Observable<any> {
-    return this.http.post(
-      `${this.api_url}${path}`,
-      JSON.stringify(body),
+    return this.http.post(`${this.api_url}${path}`, JSON.stringify(body),
       { headers: this.headers }
     )
       .map(this.checkForError)
@@ -49,10 +47,19 @@ export class ApiService {
   }
 
   delete(path): Observable<any> {
-    return this.http.delete(
-      `${this.api_url}${path}`,
-      { headers: this.headers }
-    )
+    return this.http.delete(`${this.api_url}${path}`, { headers: this.headers })
+      .map(this.checkForError)
+      .catch(err => Observable.throw(err))
+      .map(this.getJson)
+  }
+
+  login(path, creds): Observable<any> {
+    let encodedData = window.btoa(creds.email + ':' + creds.password);
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    headers.append('Authorization', 'Basic ' + encodedData);
+
+    return this.http.get(`${this.api_url}${path}`, { headers: headers })
       .map(this.checkForError)
       .catch(err => Observable.throw(err))
       .map(this.getJson)

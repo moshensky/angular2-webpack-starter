@@ -39,9 +39,9 @@ export class AuthService {
   redirectUrl: string;
 
   login(path, creds): Observable<boolean> {
-    return this.api.post(`/${path}`, creds)
-      .do(res => this.setJwt(res.token))
-      .do(res => this.storeService.update('user', res.data))
+    return this.api.login(`/${path}`, creds)
+      .do(res => this.setJwt(res.access_token))
+      .do(res => this.storeService.update('user', res))
       .map(res => res.data);
   }
 

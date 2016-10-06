@@ -1,16 +1,103 @@
 <section>
   <header id="mainHeader">
     <!--<sd-navbar></sd-navbar>-->
-    <nav>
-      <ul>
-        <li><a [routerLink]="['./search']" routerLinkActive="active-link">Search</a></li>
-        <li><a [routerLink]="['./assigned']" routerLinkActive="active-link">Assigned</a></li>
-        <li><a [routerLink]="['./monitored']" routerLinkActive="active-link">Monitored</a></li>
-        <li><a [routerLink]="['./locked']" routerLinkActive="active-link">Locked</a></li>
-        <li><a [routerLink]="['./expired']" routerLinkActive="active-link">Expired</a></li>
-        <li><a [routerLink]="['./notes']" routerLinkActive="active-link">Notes</a></li>
+    <div id="logo"><img src="assets/images/logo.png" alt="manadoc" /></div>
+
+    <div id="toolbar-top">
+      <div class="alerts-block">
+        <badge-counter styleClass="success" [content]="drafts"></badge-counter>
+        <badge-counter styleClass="error" [content]="expired"></badge-counter>
+        <badge-counter styleClass="warning" [content]="expiring"></badge-counter>
+      </div>
+    </div>
+
+    <nav class="nav-top ui-tabmenu ui-widget ui-widget-content ui-corner-all">
+      <ul class="ui-tabmenu-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">
+        <li class="ui-tabmenuitem ui-state-default ui-corner-top ui-tabmenuitem-hasicon ui-state-active">
+          <a class="ui-menuitem-link ui-corner-all" >
+            <span class="ui-menuitem-icon fa fa-user" ></span>
+            <span class="ui-menuitem-text">Super User</span>
+          </a>
+        </li>
+        <li class="ui-tabmenuitem ui-state-default ui-corner-top">
+          <a class="ui-menuitem-link ui-corner-all" >
+            <badge-counter styleClass="success" [content]="notificationsBadgeCounter"></badge-counter>
+            <span class="ui-menuitem-text">Известия</span>
+          </a>
+        </li>
+        <li class="ui-tabmenuitem ui-state-default ui-corner-top ui-tabmenuitem-hasicon">
+          <a class="ui-menuitem-link ui-corner-all" >
+            <span class="ui-menuitem-icon fa fa-history" ></span>
+            <span class="ui-menuitem-text">История</span>
+          </a>
+        </li>
+        <li class="ui-tabmenuitem ui-state-default ui-corner-top ui-tabmenuitem-hasicon">
+          <a class="ui-menuitem-link ui-corner-all" >
+            <span class="ui-menuitem-icon fa fa-info-circle" ></span>
+            <span class="ui-menuitem-text">Помощ</span>
+          </a>
+        </li>
+        <li class="ui-tabmenuitem ui-state-default ui-corner-top ui-tabmenuitem-hasicon">
+          <a class="ui-menuitem-link ui-corner-all" >
+            <span class="ui-menuitem-icon fa fa-sign-out" ></span>
+            <span class="ui-menuitem-text">Изход</span>
+          </a>
+        </li>
       </ul>
     </nav>
+
+    <nav class="nav-main ui-tabmenu ui-widget ui-widget-content ui-corner-all"
+      >
+      <ul class="ui-tabmenu-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">
+        <li class="ui-tabmenuitem ui-state-default ui-corner-top" routerLinkActive="ui-state-active">
+          <a class="ui-menuitem-link ui-corner-all" [routerLink]="['./search']">
+            <span class="ui-menuitem-icon fa" ></span>
+            <span class="ui-menuitem-text">Преглед и търсене на документи</span>
+          </a>
+        </li>
+        <li class="ui-tabmenuitem ui-state-default ui-corner-top" routerLinkActive="ui-state-active">
+          <a class="ui-menuitem-link ui-corner-all" [routerLink]="['./assigned']">
+            <span class="ui-menuitem-icon fa" ></span>
+            <span class="ui-menuitem-text">За обработка</span>
+          </a>
+        </li>
+        <li class="ui-tabmenuitem ui-state-default ui-corner-top" routerLinkActive="ui-state-active">
+          <a class="ui-menuitem-link ui-corner-all" [routerLink]="['./monitored']">
+            <span class="ui-menuitem-icon fa" ></span>
+            <span class="ui-menuitem-text">Наблюдавани документи</span>
+          </a>
+        </li>
+        <li class="ui-tabmenuitem ui-state-default ui-corner-top" routerLinkActive="ui-state-active">
+          <a class="ui-menuitem-link ui-corner-all" [routerLink]="['./locked']">
+            <span class="ui-menuitem-icon fa" ></span>
+            <span class="ui-menuitem-text">Заключени документи</span>
+          </a>
+        </li>
+        <li class="ui-tabmenuitem ui-state-default ui-corner-top" routerLinkActive="ui-state-active">
+          <a class="ui-menuitem-link ui-corner-all" [routerLink]="['./expired']">
+            <span class="ui-menuitem-icon fa" ></span>
+            <span class="ui-menuitem-text">Срокове и известия</span>
+          </a>
+        </li>
+        <li class="ui-tabmenuitem ui-state-default ui-corner-top" routerLinkActive="ui-state-active">
+          <a class="ui-menuitem-link ui-corner-all" [routerLink]="['./notes']">
+            <span class="ui-menuitem-icon fa alert default" ></span>
+            <span class="ui-menuitem-text">Бележки в документи</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!--<nav class="nav-main ui-tabmenu ui-widget ui-widget-content ui-corner-all">
+      <ul class="ui-tabmenu-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+        <li class="ui-tabmenuitem ui-state-default ui-corner-top" ><a class="ui-menuitem-link ui-corner-all" ">Search</a></li>
+        <li class="ui-tabmenuitem ui-state-default ui-corner-top" routerLinkActive="ui-state-active"><a class="ui-menuitem-link ui-corner-all" >Assigned</a></li>
+        <li class="ui-tabmenuitem ui-state-default ui-corner-top" routerLinkActive="ui-state-active"><a class="ui-menuitem-link ui-corner-all" >Monitored</a></li>
+        <li class="ui-tabmenuitem ui-state-default ui-corner-top" routerLinkActive="ui-state-active"><a class="ui-menuitem-link ui-corner-all" >Locked</a></li>
+        <li class="ui-tabmenuitem ui-state-default ui-corner-top" routerLinkActive="ui-state-active"><a class="ui-menuitem-link ui-corner-all" >Expired</a></li>
+        <li class="ui-tabmenuitem ui-state-default ui-corner-top" routerLinkActive="ui-state-active"><a class="ui-menuitem-link ui-corner-all" >Notes</a></li>
+      </ul>
+    </nav>-->
 
   </header>
   <div class="inner-wrap">

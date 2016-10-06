@@ -8,6 +8,11 @@ import { UserService } from "app/core";
   styleUrls: ["./document-flow-system.component.css"]
 })
 export class DocumentFlowSystemComponent implements OnInit {
+  drafts = 1
+  expired = 2
+  expiring = 3
+  notificationsBadgeCounter = 11
+
   msg = "Loading data...";
   userName = "";
   constructor(userService: UserService) {

@@ -7,13 +7,15 @@ import { HttpModule } from '@angular/http'
 //import { FilterTextService } from './filter-text/filter-text.service';
 //import { InitCapsPipe } from './init-caps.pipe';
 import { HighlightDirective } from "./highlight.directive"
+import { BadgeCounterComponent } from "./components"
 
 @NgModule({
   imports: [
     CommonModule
   ],
   declarations: [
-    HighlightDirective
+    HighlightDirective,
+    BadgeCounterComponent
     //FilterTextComponent,
     //InitCapsPipe
   ],
@@ -22,7 +24,8 @@ import { HighlightDirective } from "./highlight.directive"
     HttpModule,
     FormsModule,
     ReactiveFormsModule,
-    HighlightDirective
+    HighlightDirective,
+    BadgeCounterComponent
     //FilterTextComponent,
     //InitCapsPipe
   ]

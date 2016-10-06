@@ -88,6 +88,10 @@ embed, iframe, object {
   max-width: 100%;
 }
 
+#content {
+  border-top: 1px solid #c6d4e0;
+  margin-top:20px;
+}
 
 button {
 
@@ -262,13 +266,6 @@ header#mainHeader .inner-wrap { position: relative; }
   width: 74.6%;
 }
 
-#content-header {
-  border-bottom: 1px solid #c6d4e0;
-  height: 32px;
-  /*padding: 39px 0 17px;*/
-  margin-top:20px;
-  padding-bottom: 50px;
-}
 
 button > span.alert {
   position: absolute;

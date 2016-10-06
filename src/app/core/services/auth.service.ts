@@ -7,7 +7,8 @@ import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/delay';
 
 import { ApiService } from "./api.service"
-import {StoreService, Store} from "api/core"
+import { StoreService } from "./store.service"
+import { Store } from "../store"
 
 @Injectable()
 export class AuthService {

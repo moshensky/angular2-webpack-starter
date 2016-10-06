@@ -9,7 +9,7 @@ import "rxjs/add/operator/filter"
 import "rxjs/add/operator/distinctUntilChanged"
 
 import { AppState } from "./app.service"
-import { SpinnerService } from "app/core"
+import { SpinnerService, Store } from "app/core"
 
 function isStart(e: Event, index: number): boolean {
   return e instanceof NavigationStart;
@@ -40,17 +40,21 @@ function isEnd(e: Event, index: number): boolean {
     </main>
 
     <pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>
+    <pre class="app-state">this.state = {{ state | json }}</pre>
 
     <footer></footer>
   `
 })
 export class AppComponent {
+  state: any
   constructor(
     router: Router,
     spinner: SpinnerService,
-    public appState: AppState) {
+    public appState: AppState,
+    private store: Store
+  ) {
     router.events
-      .filter((e,i) => isStart(e, i) || isEnd(e, i))
+      .filter((e, i) => isStart(e, i) || isEnd(e, i))
       .map(isStart)
       .distinctUntilChanged()
       .subscribe(showSpinner => {
@@ -61,6 +65,8 @@ export class AppComponent {
         }
       })
 
+    this.store.changes//.pluck('notes')
+      .subscribe((state: any) => this.state = state);
   }
 
   ngOnInit() {

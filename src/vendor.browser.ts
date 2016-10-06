@@ -35,6 +35,10 @@ import 'rxjs/add/operator/mergeMap';
 // Statics
 //import 'rxjs/add/observable/throw';
 
+
+// PrimeNG
+import 'primeng/primeng';
+
 if ('production' === ENV) {
   // Production
 

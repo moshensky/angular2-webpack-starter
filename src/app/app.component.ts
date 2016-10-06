@@ -25,7 +25,7 @@ function isEnd(e: Event, index: number): boolean {
   selector: "app",
   encapsulation: ViewEncapsulation.None,
   styleUrls: [
-    "./app.style.css"
+    "./app.style.css",
   ],
   template: `
     <router-outlet></router-outlet>
@@ -37,6 +37,7 @@ function isEnd(e: Event, index: number): boolean {
         <li><a [routerLink]="['./document-flow-system']" routerLinkActive="active-link">Document Flow System</a></li>
       </ul>
     </nav>
+    <i class="fa fa-camera-retro fa-5x"></i>
 
     <pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>
     <pre class="app-state">this.state = {{ state | json }}</pre>

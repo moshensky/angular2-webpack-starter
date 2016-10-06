@@ -108,29 +108,7 @@ button.bigButton{
 button:hover, button.bigButton:hover {
   background-color: #28739e;
 }
-/*button.buttonGrey{*/
-  /*background: #e0e8ef;*/
-  /*background: -webkit-linear-gradient(rgb(237,243,246), rgb(222,230,237), rgb(208,220,230));*/
-  /*background: -o-linear-gradient(rgb(237,243,246), rgb(222,230,237), rgb(208,220,230));*/
-  /*background: -moz-linear-gradient(rgb(237,243,246), rgb(222,230,237), rgb(208,220,230));*/
-  /*background: linear-gradient(rgb(237,243,246), rgb(222,230,237), rgb(208,220,230));*/
-/*}*/
-/*button.buttonGrey:hover{*/
-  /*!* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d0dce6+1,dee6ed+50,edf3f6+100 *!*/
-  /*background: #d0dce6; !* Old browsers *!*/
-  /*background: -moz-linear-gradient(top,  #d0dce6 1%, #dee6ed 50%, #edf3f6 100%); !* FF3.6-15 *!*/
-  /*background: -webkit-linear-gradient(top,  #d0dce6 1%,#dee6ed 50%,#edf3f6 100%); !* Chrome10-25,Safari5.1-6 *!*/
-  /*background: linear-gradient(to bottom,  #d0dce6 1%,#dee6ed 50%,#edf3f6 100%); !* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ *!*/
-  /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d0dce6', endColorstr='#edf3f6',GradientType=0 ); !* IE6-9 *!*/
 
-/*}*/
-.buttonYellow{}
-.buttonRed{}
-/*.buttonBlue{*/
-  /*background-color: #106cc8;*/
-  /*border-style: none;*/
-  /*color: rgba(255, 255, 255, 0.87);*/
-/*}*/
 /* =CLEARFIX
 ----------------------------------------------- */
 .clearfix:after {
@@ -348,7 +326,7 @@ button.submitForm{
 
 
 /*/* =PrimeNG*/
-/*----------------------------------------------- */*/
+/*----------------------------------------------- */
 h3 { margin-top: 30px; }
 h3.first { margin-top: 0; }
 

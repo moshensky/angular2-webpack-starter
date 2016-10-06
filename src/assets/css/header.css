@@ -80,7 +80,7 @@ nav.nav-main > ul {
 .nav-top ul li.ui-tabmenuitem.ui-state-default.ui-corner-top {
   background: transparent;
   border: none;
-  margin-right: 15px;
+  /*margin-right: 15px;*/
   padding-top: 5px;
   padding-bottom: 2px;
   cursor: pointer;

@@ -4,19 +4,7 @@ import { UserService } from "app/core";
 
 @Component({
   selector: "md-administration",
-  templateUrl: `
-    <nav>
-      <ul>
-        <li><a [routerLink]="['./e-forms']" routerLinkActive="active-link">EForms</a></li>
-        <li><a [routerLink]="['./users']" routerLinkActive="active-link">Users</a></li>
-        <li><a [routerLink]="['./history']" routerLinkActive="active-link">History</a></li>
-      </ul>
-    </nav>
-    <h1 >Welcome {{userName}} to administration!</h1>
-    <div *ngIf="msg" class="msg">{{msg}}</div>
-    <router-outlet></router-outlet>
-  `
-  //styleUrls: []
+  templateUrl: "./administration.component.html"
 })
 export class AdministrationComponent implements OnInit {
   msg = "Loading data...";

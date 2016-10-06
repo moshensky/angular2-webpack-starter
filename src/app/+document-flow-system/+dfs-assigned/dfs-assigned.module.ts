@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { SharedModule } from "app/shared"
-import { routing, routes } from "./dfs-search.routing"
+import { routing, routes } from "./dfs-assigned.routing"
 
 import { DFSAssignedComponent} from "./dfs-assigned.component"
 

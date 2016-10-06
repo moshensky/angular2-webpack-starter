@@ -1,19 +1,31 @@
-/*
- * Angular 2 decorators and services
- */
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from "@angular/core"
+import {
+  Router, NavigationStart, NavigationEnd,
+  NavigationCancel, NavigationError, Event
+} from "@angular/router"
 
-import { AppState } from './app.service';
+import { Observable } from "rxjs/Observable"
+import "rxjs/add/operator/filter"
+import "rxjs/add/operator/distinctUntilChanged"
 
-/*
- * App Component
- * Top Level Component
- */
+import { AppState } from "./app.service"
+import { SpinnerService } from "app/core"
+
+function isStart(e: Event, index: number): boolean {
+  return e instanceof NavigationStart;
+}
+
+function isEnd(e: Event, index: number): boolean {
+  return e instanceof NavigationEnd ||
+    e instanceof NavigationCancel ||
+    e instanceof NavigationError;
+}
+
 @Component({
-  selector: 'app',
+  selector: "app",
   encapsulation: ViewEncapsulation.None,
   styleUrls: [
-    './app.style.css'
+    "./app.style.css"
   ],
   template: `
     <nav>
@@ -33,17 +45,26 @@ import { AppState } from './app.service';
   `
 })
 export class AppComponent {
-  angularclassLogo = 'assets/img/angularclass-avatar.png';
-  name = 'Angular 2 Webpack Starter';
-  url = 'https://twitter.com/AngularClass';
-
   constructor(
+    router: Router,
+    spinner: SpinnerService,
     public appState: AppState) {
+    router.events
+      .filter((e,i) => isStart(e, i) || isEnd(e, i))
+      .map(isStart)
+      .distinctUntilChanged()
+      .subscribe(showSpinner => {
+        if (showSpinner) {
+          spinner.show()
+        } else {
+          spinner.hide()
+        }
+      })
 
   }
 
   ngOnInit() {
-    console.log('Initial App State', this.appState.state);
+    console.log("Initial App State", this.appState.state)
   }
 
 }

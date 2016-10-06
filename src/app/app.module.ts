@@ -12,11 +12,9 @@ import { AppComponent } from './app.component'
 import { APP_RESOLVER_PROVIDERS } from './app.resolver'
 import { AppState, InteralStateType } from './app.service'
 
-// todo: refactore to modules
+
 import {SharedModule} from "app/shared"
-import { Home } from './home'
 import { NoContent } from './no-content'
-import { XLarge } from './home/x-large'
 
 /* Feature Modules */
 import { CoreModule } from "./core"
@@ -40,10 +38,7 @@ type StoreType = {
   bootstrap: [AppComponent],
   declarations: [
     AppComponent,
-    // todo: remove!!!
-    Home,
     NoContent,
-    XLarge,
   ],
   imports: [ // import Angular's modules
     BrowserModule,

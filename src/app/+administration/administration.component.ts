@@ -5,6 +5,19 @@ import { UserService } from "app/core";
 @Component({
   selector: "md-administration",
   templateUrl: `
+    <nav>
+      <span>
+        <a [routerLink]="['./e-forms']" routerLinkActive="active-link">EForms</a>
+      </span>
+      |
+      <span>
+        <a [routerLink]="['./users']" routerLinkActive="active-link">Users</a>
+      </span>
+      |
+      <span>
+        <a [routerLink]="['./history']" routerLinkActive="active-link">History</a>
+      </span>
+    </nav>
     <h1 >Welcome {{userName}} to administration!</h1>
     <div *ngIf="msg" class="msg">{{msg}}</div>
     <router-outlet></router-outlet>

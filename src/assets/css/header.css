@@ -9,10 +9,14 @@
 }
 /*MAIN MENU START*/
 .nav-main {
-  background: transparent;
-  left: 48px;
-  float: left;
-  top: 5px;
+  padding-left: 48px;
+  background: #0a416d url('../../assets/images/bg_h.jpg') top center no-repeat;
+  border-bottom: 5px solid #04a2e5;
+}
+
+nav.nav-main > ul {
+  position: absolute;
+  bottom: -8px;
 }
 
 .nav-main ul.ui-tabmenu-nav.ui-helper-reset.ui-helper-clearfix.ui-widget-header.ui-corner-all li {
@@ -22,6 +26,7 @@
   margin: 0;
   border: none;
   background: transparent;
+  top: 0;
 }
 
 .nav-main ul.ui-tabmenu-nav.ui-helper-reset.ui-helper-clearfix.ui-widget-header.ui-corner-all li a {
@@ -38,9 +43,6 @@
   width: auto;
 }
 
-.nav-main ul.ui-tabmenu-nav.ui-helper-reset.ui-helper-clearfix.ui-widget-header.ui-corner-all li.ui-state-active {
-  background: transparent;
-}
 
 .nav-main ul.ui-tabmenu-nav.ui-helper-reset.ui-helper-clearfix.ui-widget-header.ui-corner-all li.ui-state-active a {
   background: #04a2e5;
@@ -186,4 +188,3 @@
 }
 
 /*MENU DIALOG END*/
-

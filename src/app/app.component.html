@@ -1,0 +1,61 @@
+<header id="mainHeader">
+  <!--<sd-navbar></sd-navbar>-->
+  <div id="logo"><img src="assets/images/logo.png" alt="manadoc" /></div>
+
+  <div id="toolbar-top">
+    <div class="alerts-block">
+      <badge-counter styleClass="success" [content]="drafts"></badge-counter>
+      <badge-counter styleClass="error" [content]="expired"></badge-counter>
+      <badge-counter styleClass="warning" [content]="expiring"></badge-counter>
+    </div>
+  </div>
+
+  <nav class="nav-top ui-tabmenu ui-widget ui-widget-content ui-corner-all">
+    <ul class="ui-tabmenu-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">
+      <li class="ui-tabmenuitem ui-state-default ui-corner-top ui-tabmenuitem-hasicon ui-state-active">
+        <a class="ui-menuitem-link ui-corner-all">
+          <span class="ui-menuitem-icon fa fa-user"></span>
+          <span class="ui-menuitem-text">Super User</span>
+        </a>
+      </li>
+      <li class="ui-tabmenuitem ui-state-default ui-corner-top">
+        <a class="ui-menuitem-link ui-corner-all">
+          <badge-counter styleClass="success" [content]="notificationsBadgeCounter"></badge-counter>
+          <span class="ui-menuitem-text">Известия</span>
+        </a>
+      </li>
+      <li class="ui-tabmenuitem ui-state-default ui-corner-top ui-tabmenuitem-hasicon">
+        <a class="ui-menuitem-link ui-corner-all">
+          <span class="ui-menuitem-icon fa fa-history"></span>
+          <span class="ui-menuitem-text">История</span>
+        </a>
+      </li>
+      <li class="ui-tabmenuitem ui-state-default ui-corner-top ui-tabmenuitem-hasicon">
+        <a class="ui-menuitem-link ui-corner-all">
+          <span class="ui-menuitem-icon fa fa-info-circle"></span>
+          <span class="ui-menuitem-text">Помощ</span>
+        </a>
+      </li>
+      <li class="ui-tabmenuitem ui-state-default ui-corner-top ui-tabmenuitem-hasicon">
+        <a class="ui-menuitem-link ui-corner-all">
+          <span class="ui-menuitem-icon fa fa-sign-out"></span>
+          <span class="ui-menuitem-text">Изход</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<router-outlet></router-outlet>
+
+
+<nav>
+  <ul>
+    <li><a [routerLink]="['./administration']" routerLinkActive="active-link">Administration</a></li>
+    <li><a [routerLink]="['./document-flow-system']" routerLinkActive="active-link">Document Flow System</a></li>
+  </ul>
+</nav>
+<i class="fa fa-camera-retro fa-5x"></i>
+
+<pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>
+<pre class="app-state">this.state = {{ state | json }}</pre>

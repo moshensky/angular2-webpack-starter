@@ -27,23 +27,14 @@ function isEnd(e: Event, index: number): boolean {
   styleUrls: [
     "./app.style.css",
   ],
-  template: `
-    <router-outlet></router-outlet>
-
-
-    <nav>
-      <ul>
-        <li><a [routerLink]="['./administration']" routerLinkActive="active-link">Administration</a></li>
-        <li><a [routerLink]="['./document-flow-system']" routerLinkActive="active-link">Document Flow System</a></li>
-      </ul>
-    </nav>
-    <i class="fa fa-camera-retro fa-5x"></i>
-
-    <pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>
-    <pre class="app-state">this.state = {{ state | json }}</pre>
-  `
+  templateUrl: "./app.component.html"
 })
 export class AppComponent {
+  drafts = 1
+  expired = 2
+  expiring = 3
+  notificationsBadgeCounter = 11
+
   state: any
   constructor(
     router: Router,

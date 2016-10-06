@@ -5,13 +5,9 @@ import { UserService } from "app/core";
 @Component({
   selector: "md-document-flow-system",
   templateUrl: "./document-flow-system.component.html",
-  styleUrls: ["./document-flow-system.component.css"]
+  styleUrls: []
 })
 export class DocumentFlowSystemComponent implements OnInit {
-  drafts = 1
-  expired = 2
-  expiring = 3
-  notificationsBadgeCounter = 11
 
   msg = "Loading data...";
   userName = "";

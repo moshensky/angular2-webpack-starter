@@ -1,6 +1,17 @@
 <section>
   <header id="mainHeader">
     <!--<sd-navbar></sd-navbar>-->
+    <nav>
+      <ul>
+        <li><a [routerLink]="['./search']" routerLinkActive="active-link">Search</a></li>
+        <li><a [routerLink]="['./assigned']" routerLinkActive="active-link">Assigned</a></li>
+        <li><a [routerLink]="['./monitored']" routerLinkActive="active-link">Monitored</a></li>
+        <li><a [routerLink]="['./locked']" routerLinkActive="active-link">Locked</a></li>
+        <li><a [routerLink]="['./expired']" routerLinkActive="active-link">Expired</a></li>
+        <li><a [routerLink]="['./notes']" routerLinkActive="active-link">Notes</a></li>
+      </ul>
+    </nav>
+
   </header>
   <div class="inner-wrap">
     <div id="content">

@@ -5,7 +5,7 @@ import { UserService } from "app/core";
 @Component({
   selector: "md-document-flow-system",
   templateUrl: "./document-flow-system.component.html",
-  styleUrls: []
+  styleUrls: ["./document-flow-system.component.css"]
 })
 export class DocumentFlowSystemComponent implements OnInit {
   msg = "Loading data...";

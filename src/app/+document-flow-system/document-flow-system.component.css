@@ -1,0 +1,188 @@
+.nav-main .dialogTabs, .nav-top{
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+
+  /* Rules below not implemented in browsers yet */
+  -o-user-select: none;
+  user-select: none;
+}
+/*MAIN MENU START*/
+.nav-main {
+  background: transparent;
+  left: 48px;
+  float: left;
+  top: 5px;
+}
+
+.nav-main ul.ui-tabmenu-nav.ui-helper-reset.ui-helper-clearfix.ui-widget-header.ui-corner-all li {
+  padding: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 18px;
+  margin: 0;
+  border: none;
+  background: transparent;
+}
+
+.nav-main ul.ui-tabmenu-nav.ui-helper-reset.ui-helper-clearfix.ui-widget-header.ui-corner-all li a {
+  color: #fff;
+  outline: none;
+  background: #176ea5 /*url('../assets/images/bg_mb.jpg') repeat-x*/;
+  background: -webkit-linear-gradient(rgb(22, 112, 167), rgb(22, 106, 157), rgb(24, 85, 139)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(rgb(22, 112, 167), rgb(22, 106, 157), rgb(24, 85, 139)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(rgb(22, 112, 167), rgb(22, 106, 157), rgb(24, 85, 139)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(rgb(22, 112, 167), rgb(22, 106, 157), rgb(24, 85, 139)); /* Standard syntax */
+  border-left: 1px solid #0b6eac;
+  border-right: 1px solid #002a55;
+  padding: 9px 6px;
+  width: auto;
+}
+
+.nav-main ul.ui-tabmenu-nav.ui-helper-reset.ui-helper-clearfix.ui-widget-header.ui-corner-all li.ui-state-active {
+  background: transparent;
+}
+
+.nav-main ul.ui-tabmenu-nav.ui-helper-reset.ui-helper-clearfix.ui-widget-header.ui-corner-all li.ui-state-active a {
+  background: #04a2e5;
+  outline: none;
+  padding: 13px 6px;
+  position: relative;
+  bottom: 7px;
+  border-radius: 3px 3px 0 0;
+}
+
+.nav-main ul li, .nav-main ul li a {
+  border-radius: 0;
+}
+
+/*MAIN MENU END*/
+
+/*MENU TOP START*/
+.nav-top {
+  right: 127px;
+  position: absolute;
+  top: 0;
+  background: transparent;
+  border: none;
+  color: #222;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.nav-top ul {
+  border: 1px solid #266396;
+  border-radius: 0 0 10px 10px;
+  border-top: none;
+}
+
+.nav-top ul li.ui-tabmenuitem.ui-state-default.ui-corner-top {
+  background: transparent;
+  border: none;
+  margin-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+}
+
+.nav-top ul li.ui-tabmenuitem.ui-state-default.ui-corner-top a {
+  color: #57c6f6;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  outline: none;
+}
+
+.nav-top ul li.ui-tabmenuitem.ui-state-default:active a.ui-menuitem-link{
+  /*Important is needed, because the hover color dominates -> TODO: review*/
+  color:#fff !important;
+}
+
+.nav-top ul li.ui-tabmenuitem.ui-state-default.ui-corner-top.ui-state-hover a {
+  color: #29b6f2
+}
+
+.nav-top ul li.ui-tabmenuitem.ui-state-default.ui-corner-top {
+  outline: none;
+}
+
+#toolbar-top {
+  height: 87px;
+  position: relative;
+}
+
+#toolbar-top .ui-widget-header {
+  background: transparent;
+  border: none;
+  color: #222;
+  font-weight: bold;
+  margin-right: 125px;
+}
+
+
+/*MENU TOP END*/
+
+/*MENU DIALOG START*/
+
+.dialogTabs {
+  background: transparent;
+  display: inline-block;
+}
+
+.dialogTabs .ui-tabmenuitem.ui-state-default.ui-corner-top.ui-state-active {
+  background: #e5e9ef;
+  background: -webkit-linear-gradient(rgb(222, 228, 235), rgb(237, 239, 243), rgb(243, 244, 247));
+  background: -o-linear-gradient(rgb(222, 228, 235), rgb(237, 239, 243), rgb(243, 244, 247));
+  background: -moz-linear-gradient(rgb(222, 228, 235), rgb(237, 239, 243), rgb(243, 244, 247));
+  background: linear-gradient(rgb(222, 228, 235), rgb(237, 239, 243), rgb(243, 244, 247));
+  border-color: #cdd7e9;
+  box-shadow: 0 1px 0 #f3f4f7, 0 1px 0 #fff inset;
+  color: #444;
+  font-weight: bold;
+  text-shadow: 0 1px 0 #fff;
+  top: 0;
+  outline: none;
+}
+
+.dialogTabs .ui-tabmenuitem.ui-state-default.ui-corner-top {
+  background: #caedfc;
+  background: -webkit-linear-gradient(rgb(187, 233, 253), rgb(215, 241, 251), rgb(192, 233, 250));
+  background: -o-linear-gradient(rgb(187, 233, 253), rgb(215, 241, 251), rgb(192, 233, 250));
+  background: -moz-linear-gradient(rgb(187, 233, 253), rgb(215, 241, 251), rgb(192, 233, 250));
+  background: linear-gradient(rgb(187, 233, 253), rgb(215, 241, 251), rgb(192, 233, 250));
+  border-color: #9ad8f3;
+  box-shadow: 0 1px 0 #afe3f9, 0 1px 0 #fff inset;
+  top: 5px;
+}
+
+.dialogTabs ul.ui-tabmenu-nav.ui-helper-reset.ui-helper-clearfix.ui-widget-header.ui-corner-all li {
+  height: 34px
+}
+
+.dialogTabs ul.ui-tabmenu-nav.ui-helper-reset.ui-helper-clearfix.ui-widget-header.ui-corner-all li.ui-state-active {
+  background: #e5e9ef;
+  background: -webkit-linear-gradient(rgb(222, 228, 235), rgb(237, 239, 243), rgb(243, 244, 247));
+  background: -o-linear-gradient(rgb(222, 228, 235), rgb(237, 239, 243), rgb(243, 244, 247));
+  background: -moz-linear-gradient(rgb(222, 228, 235), rgb(237, 239, 243), rgb(243, 244, 247));
+  background: linear-gradient(rgb(222, 228, 235), rgb(237, 239, 243), rgb(243, 244, 247));
+  border-color: #cdd7e9;
+  box-shadow: 0 1px 0 #f3f4f7, 0 1px 0 #fff inset;
+  color: #444;
+  font-weight: bold;
+  text-shadow: 0 1px 0 #fff;
+  top: 6px;
+}
+
+.dialogTabs ul.ui-tabmenu-nav.ui-helper-reset.ui-helper-clearfix.ui-widget-header.ui-corner-all li a {
+  padding-top: 11px;
+}
+
+.dialogTabs ul.ui-tabmenu-nav.ui-helper-reset.ui-helper-clearfix.ui-widget-header.ui-corner-all li.ui-state-active a {
+  /*background: #04a2e5;*/
+  outline: none;
+  position: relative;
+  padding: 18px 13px;
+  bottom: 7px;
+  border-radius: 3px 3px 0 0;
+}
+
+/*MENU DIALOG END*/
+

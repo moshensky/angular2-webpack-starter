@@ -5,8 +5,19 @@ import { UserService } from "app/core";
 @Component({
   selector: "md-document-flow-system",
   templateUrl: `
+    <nav>
+      <ul>
+        <li><a [routerLink]="['./search']" routerLinkActive="active-link">Search</a></li>
+        <li><a [routerLink]="['./assigned']" routerLinkActive="active-link">Assigned</a></li>
+        <li><a [routerLink]="['./monitored']" routerLinkActive="active-link">Monitored</a></li>
+        <li><a [routerLink]="['./locked']" routerLinkActive="active-link">Locked</a></li>
+        <li><a [routerLink]="['./expired']" routerLinkActive="active-link">Expired</a></li>
+        <li><a [routerLink]="['./notes']" routerLinkActive="active-link">Notes</a></li>
+      </ul>
+    </nav>
     <h1 highlight>Welcome {{userName}} to document flow system search!</h1>
     <div *ngIf="msg" class="msg">{{msg}}</div>
+    <aside>Tree menu</aside>
     <router-outlet></router-outlet>
   `,
   styleUrls: []

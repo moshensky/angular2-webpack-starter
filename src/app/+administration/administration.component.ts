@@ -6,17 +6,11 @@ import { UserService } from "app/core";
   selector: "md-administration",
   templateUrl: `
     <nav>
-      <span>
-        <a [routerLink]="['./e-forms']" routerLinkActive="active-link">EForms</a>
-      </span>
-      |
-      <span>
-        <a [routerLink]="['./users']" routerLinkActive="active-link">Users</a>
-      </span>
-      |
-      <span>
-        <a [routerLink]="['./history']" routerLinkActive="active-link">History</a>
-      </span>
+      <ul>
+        <li><a [routerLink]="['./e-forms']" routerLinkActive="active-link">EForms</a></li>
+        <li><a [routerLink]="['./users']" routerLinkActive="active-link">Users</a></li>
+        <li><a [routerLink]="['./history']" routerLinkActive="active-link">History</a></li>
+      </ul>
     </nav>
     <h1 >Welcome {{userName}} to administration!</h1>
     <div *ngIf="msg" class="msg">{{msg}}</div>

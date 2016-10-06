@@ -12,7 +12,11 @@ export const routes: Routes = [{
     //{ path: "", redirectTo: "search", pathMatch: "full" },
     { path: "", redirectTo: "search" },
     { path: "search", loadChildren: "./+dfs-search#DFSSearchModule" },
-    //{ path: "search", component: SearchComponent },
+    { path: "assigned", loadChildren: "./+dfs-assigned#DFSAssignedhModule" },
+    { path: "monitored", loadChildren: "./+dfs-monitored#DFSMonitoredModule" },
+    { path: "locked", loadChildren: "./+dfs-locked#DFSLockedModule" },
+    { path: "expired", loadChildren: "./+dfs-expired#DFSExpiredModule" },
+    { path: "notes", loadChildren: "./+dfs-notes#DFSNotesModule" },
   ]
 }]
 

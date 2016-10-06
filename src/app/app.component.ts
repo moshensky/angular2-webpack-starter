@@ -17,13 +17,10 @@ import { AppState } from './app.service';
   ],
   template: `
     <nav>
-      <span>
-        <a [routerLink]="['./administration']" routerLinkActive="active-link">Administration</a>
-      </span>
-      |
-      <span>
-        <a [routerLink]="['./document-flow-system']" routerLinkActive="active-link">Document Flow System</a>
-      </span>
+      <ul>
+        <li><a [routerLink]="['./administration']" routerLinkActive="active-link">Administration</a></li>
+        <li><a [routerLink]="['./document-flow-system']" routerLinkActive="active-link">Document Flow System</a></li>
+      </ul>
     </nav>
 
     <main>

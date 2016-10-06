@@ -3,7 +3,6 @@ import { Component, OnInit } from "@angular/core";
 import { UserService } from "app/core";
 
 @Component({
-  //moduleId: module.id,
   selector: 'md-detail',
   templateUrl: `
     <h1 >Welcome {{userName}} to administration!</h1>

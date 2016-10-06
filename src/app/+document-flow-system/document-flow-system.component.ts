@@ -3,7 +3,6 @@ import { Component, OnInit } from "@angular/core";
 import { UserService } from "app/core";
 
 @Component({
-  //moduleId: module.id,
   selector: "md-document-flow-system",
   templateUrl: `
     <h1 highlight>Welcome {{userName}} to document flow system search!</h1>

@@ -28,6 +28,9 @@ function isEnd(e: Event, index: number): boolean {
     "./app.style.css"
   ],
   template: `
+    <router-outlet></router-outlet>
+
+
     <nav>
       <ul>
         <li><a [routerLink]="['./administration']" routerLinkActive="active-link">Administration</a></li>
@@ -35,14 +38,8 @@ function isEnd(e: Event, index: number): boolean {
       </ul>
     </nav>
 
-    <main>
-      <router-outlet></router-outlet>
-    </main>
-
     <pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>
     <pre class="app-state">this.state = {{ state | json }}</pre>
-
-    <footer></footer>
   `
 })
 export class AppComponent {

@@ -18,7 +18,6 @@ export class DocumentFlowSystemComponent implements OnInit {
     this.displayMessage("fuck off :)");
   }
 
-
   displayMessage(msg: string) {
     this.msg = msg;
     setTimeout(() => {

@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 import { TreeService, DocumentService, ContainerService, EventBroadcaster } from "app/core"
 
-import {TreeModule,TreeNode} from 'primeng/primeng';
+import {TreeNode} from "primeng/primeng"
 
 @Component({
-  selector: 'dfs-tree',
-  templateUrl: 'dfs-tree.component.html',
-  styleUrls: ['dfs-tree.component.css'],
+  selector: "dfs-tree",
+  templateUrl: "dfs-tree.component.html",
+  styleUrls: ["dfs-tree.component.css"],
 })
 export class DFSTreeComponent implements OnInit {
   public nodes: TreeNode[] = new Array();
@@ -18,10 +18,10 @@ export class DFSTreeComponent implements OnInit {
   displayDeleteDialog: boolean = false;
 
   contextMenu: any[] = [{
-    label: 'New File',
+    label: "New File",
     command: this.createDocument.bind(this)
   }, {
-    label: 'Delete File',
+    label: "Delete File",
     command: this.deleteDocument.bind(this)
   }];
 
@@ -30,9 +30,9 @@ export class DFSTreeComponent implements OnInit {
     private broadcaster: EventBroadcaster,
     private containerService: ContainerService) {
 
-    this.broadcaster.on('CloseEditDialog').subscribe(this.onEditDialogClose.bind(this));
-    this.broadcaster.on('CloseContainerDialog').subscribe(this.onContainerDialogClose.bind(this));
-    this.broadcaster.on('CloseEditAccessDialog').subscribe(this.onEditAccessDialogClose.bind(this));
+    this.broadcaster.on("CloseEditDialog").subscribe(this.onEditDialogClose.bind(this));
+    this.broadcaster.on("CloseContainerDialog").subscribe(this.onContainerDialogClose.bind(this));
+    this.broadcaster.on("CloseEditAccessDialog").subscribe(this.onEditAccessDialogClose.bind(this));
   }
 
   ngOnInit() {
@@ -59,62 +59,62 @@ export class DFSTreeComponent implements OnInit {
 
     if (event.node.type === 400) {
       this.contextMenu = [{
-        label: 'Редакция',
-        icon: 'fa-edit',
+        label: "Редакция",
+        icon: "fa-edit",
         command: this.editDocument.bind(this)
       }, {
-        label: 'Изтриване',
-        icon: 'fa-trash',
+        label: "Изтриване",
+        icon: "fa-trash",
         command: this.deleteDocument.bind(this)
       }, {
-        label: 'Изрязване',
-        icon: 'fa-cut',
+        label: "Изрязване",
+        icon: "fa-cut",
         command: this.cutDocument.bind(this)
       }, {
-        label: 'Копиране',
-        icon: 'fa-copy',
+        label: "Копиране",
+        icon: "fa-copy",
         command: this.copyDocument.bind(this)
       }];
     } else {
       this.contextMenu = [{
-        label: 'Добавяне',
-        icon: 'fa-plus',
+        label: "Добавяне",
+        icon: "fa-plus",
         items: [{
-          label: 'Документ',
-          icon: 'fa-file-o',
+          label: "Документ",
+          icon: "fa-file-o",
           command: this.createDocument.bind(this)
         }, {
-          label: 'Папка',
-          icon: 'fa-folder',
+          label: "Папка",
+          icon: "fa-folder",
           command: this.createFolder.bind(this)
         }, {
-          label: 'Класьор',
-          icon: 'fa-folder',
+          label: "Класьор",
+          icon: "fa-folder",
           command: this.createBinder.bind(this)
         }]
       }, {
-        label: 'Редакция',
-        icon: 'fa-edit',
+        label: "Редакция",
+        icon: "fa-edit",
         command: this.editFolder.bind(this)
       }, {
-        label: 'Изтриване',
-        icon: 'fa-trash',
+        label: "Изтриване",
+        icon: "fa-trash",
         command: this.deleteFolder.bind(this)
       }, {
-        label: 'Изрязване',
-        icon: 'fa-cut',
+        label: "Изрязване",
+        icon: "fa-cut",
         command: this.cutFolder.bind(this)
       }, {
-        label: 'Копиране',
-        icon: 'fa-copy',
+        label: "Копиране",
+        icon: "fa-copy",
         command: this.copyFolder.bind(this)
       }, {
-        label: 'Поставяне',
-        icon: 'fa-paste',
+        label: "Поставяне",
+        icon: "fa-paste",
         command: this.paste.bind(this)
       }, {
-        label: 'Права',
-        icon: 'fa-group',
+        label: "Права",
+        icon: "fa-group",
         command: this.editRights.bind(this)
       }];
     }
@@ -130,7 +130,7 @@ export class DFSTreeComponent implements OnInit {
   nodeKeyPress(node, event) {
     const keyName = event.key;
 
-    if (keyName === 'Enter') {
+    if (keyName === "Enter") {
       event.preventDefault();
       node.isEdited = false;
     }
@@ -143,7 +143,7 @@ export class DFSTreeComponent implements OnInit {
 
   nodeSelect(event) {
     if (event.node.type !== 400) {
-      this.broadcaster.broadcast('NodeSelected', event.node.id);
+      this.broadcaster.broadcast("NodeSelected", event.node.id);
     }
   }
 
@@ -153,7 +153,7 @@ export class DFSTreeComponent implements OnInit {
       parentId: this.selectedFile.id
     };
 
-    this.broadcaster.broadcast('OpenEditDialog', data);
+    this.broadcaster.broadcast("OpenEditDialog", data);
   }
 
   editDocument() {
@@ -162,7 +162,7 @@ export class DFSTreeComponent implements OnInit {
       parentId: undefined
     };
 
-    this.broadcaster.broadcast('OpenEditDialog', data);
+    this.broadcaster.broadcast("OpenEditDialog", data);
   }
 
   deleteDocument() {
@@ -242,7 +242,7 @@ export class DFSTreeComponent implements OnInit {
       parentId: this.selectedFile.id,
       type: 200
     };
-    this.broadcaster.broadcast('OpenContainerDialog', data);
+    this.broadcaster.broadcast("OpenContainerDialog", data);
   }
 
   createBinder() {
@@ -251,7 +251,7 @@ export class DFSTreeComponent implements OnInit {
       parentId: this.selectedFile.id,
       type: 300
     };
-    this.broadcaster.broadcast('OpenContainerDialog', data);
+    this.broadcaster.broadcast("OpenContainerDialog", data);
   }
 
   editFolder() {
@@ -260,7 +260,7 @@ export class DFSTreeComponent implements OnInit {
       parentId: undefined
     };
 
-    this.broadcaster.broadcast('OpenContainerDialog', data);
+    this.broadcaster.broadcast("OpenContainerDialog", data);
   }
 
   editRights() {
@@ -269,7 +269,7 @@ export class DFSTreeComponent implements OnInit {
       parentId: this.selectedFile.parentId
     };
 
-    this.broadcaster.broadcast('OpenEditAccessDialog', data);
+    this.broadcaster.broadcast("OpenEditAccessDialog", data);
   }
 
   deleteFolder() {
@@ -350,7 +350,7 @@ export class DFSTreeComponent implements OnInit {
   }
 
   onEditAccessDialogClose(data) {
-    if (data.parentId !== '00000000-0000-0000-0000-000000000000') {
+    if (data.parentId !== "00000000-0000-0000-0000-000000000000") {
       let parent = this.find(this.nodes, data.parentId);
 
       this.treeService.getTreeNodes(parent.id).then(nodes => {

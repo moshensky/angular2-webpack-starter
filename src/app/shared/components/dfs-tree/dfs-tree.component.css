@@ -1,4 +1,42 @@
 
+>>> .treeView{
+  background: transparent;
+  border: none;
+  color: #555;
+}
+
+>>> .treeView ul li.ui-treenode{
+  color: #555;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+}
+
+>>> .treeView .ui-tree-toggler.fa-caret-right:before{
+  content: "\f196"
+}
+
+>>> .treeView .ui-tree-toggler.fa-caret-down:before{
+  content: "\f147";
+}
+>>> .ui-tree .ui-treenode-label { padding: 3px; }
+>>> .treeView .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight { background: #04a2e5; }
+>>> .treeView.ui-tree .ui-treenode-icon { color: #29b6f2; }
+>>> .treeView.ui-tree .ui-tree-toggler { color: #cbd3e0; }
+>>> .treeView .fa { font-size: 14px; }
+>>> .treeView .fa-fw { text-align: right; }
+
+>>> .treeView .ui-state-hover,
+.treeView .ui-widget-content .ui-state-hover,
+.treeView .ui-widget-header .ui-state-hover,
+.treeView .ui-state-focus,.treeView  #leftside .ui-widget-content .ui-state-focus,
+.treeView .ui-widget-header .ui-state-focus {
+  background: #d3f0fc;
+  color: #555;
+}
+>>> .treeView .ui-treenode-label.ui-corner-all{
+  margin-left:2px;
+}
+
 
 
 

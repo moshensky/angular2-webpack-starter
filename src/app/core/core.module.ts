@@ -6,7 +6,8 @@ import { CommonModule } from "@angular/common"
 
 import {
   UserService, AuthGuard, AuthService, CanDeactivateGuard,
-  SpinnerService, StoreService, ApiService
+  SpinnerService, StoreService, ApiService, DocumentService,
+  EventBroadcaster, TreeService,
 } from "./services"
 
 import { Store } from "./store"
@@ -22,14 +23,8 @@ import { Store } from "./store"
     //TitleComponent,
   ],
   providers: [
-    UserService,
-    AuthGuard,
-    AuthService,
-    CanDeactivateGuard,
-    SpinnerService,
-    StoreService,
-    Store,
-    ApiService
+    UserService, AuthGuard, AuthService, CanDeactivateGuard, SpinnerService, StoreService,
+    Store, ApiService, DocumentService, EventBroadcaster, TreeService
   ]
 })
 export class CoreModule {

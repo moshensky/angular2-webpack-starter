@@ -1,0 +1,11 @@
+<p-tree [value]="nodes"
+        selectionMode="single"
+        [(selection)]="selectedFile"
+        (onNodeExpand)="nodeExpand($event)"
+        (onNodeContextMenuSelect)="nodeContextMenuSelect($event)"
+        (onNodeSelect)= "nodeSelect($event)"
+        styleClass="treeView"
+        [contextMenu]="cm">
+</p-tree>
+
+<p-contextMenu #cm styleClass="contextMenu" [model]="contextMenu"></p-contextMenu>

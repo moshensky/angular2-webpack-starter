@@ -10,7 +10,7 @@ export class TreeService {
   constructor(private customHttp: ApiService) { }
 
   getRoot(): Promise<any> {
-    return this.customHttp.get('nodes')
+    return this.customHttp.get('/nodes')
       .map(response => {
         let nodes = [];
         let node = {
@@ -29,7 +29,7 @@ export class TreeService {
   }
 
   getTreeNodes(id): Promise<any> {
-    return this.customHttp.get('nodes/' + id)
+    return this.customHttp.get('/nodes/' + id)
       .map(response => {
         // todo: refactore!!!!
         for (let data of response) {
@@ -61,6 +61,6 @@ export class TreeService {
       }).toPromise();
     }
 
-    return this.customHttp.get('nodes/document/' + id).toPromise();
+    return this.customHttp.get('/nodes/document/' + id).toPromise();
   }
 }

@@ -7,27 +7,34 @@ import { HttpModule } from '@angular/http'
 //import { FilterTextService } from './filter-text/filter-text.service';
 //import { InitCapsPipe } from './init-caps.pipe';
 import { HighlightDirective } from "./highlight.directive"
-import { BadgeCounterComponent } from "./components"
+import { BadgeCounterComponent, DFSTreeComponent } from "./components"
+
+import { TreeModule, ContextMenuModule } from 'primeng/primeng';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+
+    TreeModule,
+    ContextMenuModule,
   ],
   declarations: [
     HighlightDirective,
-    BadgeCounterComponent
-    //FilterTextComponent,
-    //InitCapsPipe
+    BadgeCounterComponent,
+    DFSTreeComponent,
   ],
   exports: [
     CommonModule,
+
+    TreeModule,
+    ContextMenuModule,
+
     HttpModule,
     FormsModule,
     ReactiveFormsModule,
     HighlightDirective,
-    BadgeCounterComponent
-    //FilterTextComponent,
-    //InitCapsPipe
+    BadgeCounterComponent,
+    DFSTreeComponent,
   ]
 })
 export class SharedModule {

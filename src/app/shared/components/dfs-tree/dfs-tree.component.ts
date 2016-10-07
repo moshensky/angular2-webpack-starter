@@ -1,18 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { TreeService, DocumentService, ContainerService, EventBroadcaster } from "app/core"
 
-import { Tree, TreeNode, ContextMenu } from 'primeng/primeng';
-import { TreeService } from "../shared/services/tree.service";
-import { DocumentService } from "../shared/services/document.service";
-import { ContainerService } from "../shared/services/container.service";
-import { CustomHttp, EventBroadcaster } from '../shared/utils/index';
+import {TreeModule,TreeNode} from 'primeng/primeng';
 
 @Component({
-  moduleId: module.id,
   selector: 'dfs-tree',
   templateUrl: 'dfs-tree.component.html',
   styleUrls: ['dfs-tree.component.css'],
-  directives: [Tree, ContextMenu],
-  providers: [TreeService, CustomHttp, DocumentService, ContainerService]
 })
 export class DFSTreeComponent implements OnInit {
   public nodes: TreeNode[] = new Array();
@@ -20,7 +14,7 @@ export class DFSTreeComponent implements OnInit {
   documentToBeCopied: Object;
   containerToBeCut: Object;
   containerToBeCopied: Object;
-  selectedFile: TreeNode = {};
+  selectedFile: any = {}   // TreeNode
   displayDeleteDialog: boolean = false;
 
   contextMenu: any[] = [{
@@ -172,7 +166,8 @@ export class DFSTreeComponent implements OnInit {
   }
 
   deleteDocument() {
-    this.documentService.deleteDocument(this.selectedFile.id).then(node => {
+    //this.documentService.deleteDocument(this.selectedFile.id).then(node => {
+    this.documentService.deleteDocument(this.selectedFile.id).then(() => {
       let node = this.find(this.nodes, this.selectedFile.parentId);
       this.treeService.getTreeNodes(node.id).then(nodes => {
         node.children = nodes;
@@ -191,7 +186,7 @@ export class DFSTreeComponent implements OnInit {
   }
 
   pasteDocument() {
-    let document = this.documentToBeCut || this.documentToBeCopied;
+    let document: any = this.documentToBeCut || this.documentToBeCopied;
     let data = {
       id: document.id,
       parentId: this.selectedFile.id
@@ -278,7 +273,8 @@ export class DFSTreeComponent implements OnInit {
   }
 
   deleteFolder() {
-    this.containerService.deleteContainer(this.selectedFile.id).then(node => {
+    //this.containerService.deleteContainer(this.selectedFile.id).then(node => {
+    this.containerService.deleteContainer(this.selectedFile.id).then(() => {
       let node = this.find(this.nodes, this.selectedFile.parentId);
       this.treeService.getTreeNodes(node.id).then(nodes => {
         node.children = nodes;

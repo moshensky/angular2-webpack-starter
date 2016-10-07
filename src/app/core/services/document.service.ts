@@ -27,19 +27,19 @@ export class DocumentService {
   constructor(private customHttp: ApiService) { }
 
   public getDocuments(page, size): Promise<any> {
-    return this.customHttp.get('document-units?page=' + page + '&count=' + size).toPromise();
+    return this.customHttp.get('/document-units?page=' + page + '&count=' + size).toPromise();
   }
 
   public getMonitoredDocuments(page, size): Promise<any> {
-    return this.customHttp.get('document-units/monitored?page=' + page + '&count=' + size).toPromise();
+    return this.customHttp.get('/document-units/monitored?page=' + page + '&count=' + size).toPromise();
   }
 
   public getAssignedDocuments(page, size): Promise<any> {
-    return this.customHttp.get('document-units/assigned?page=' + page + '&count=' + size).toPromise();
+    return this.customHttp.get('/document-units/assigned?page=' + page + '&count=' + size).toPromise();
   }
 
   public getLockedDocuments(page, size): Promise<any> {
-    return this.customHttp.get('document-units/locked?page=' + page + '&count=' + size).toPromise();
+    return this.customHttp.get('/document-units/locked?page=' + page + '&count=' + size).toPromise();
   }
 
   public getDocument(id): Promise<any> {
@@ -47,43 +47,43 @@ export class DocumentService {
       return Observable.of([]).toPromise();
     }
 
-    return this.customHttp.get('document-units/' + id).toPromise();
+    return this.customHttp.get('/document-units/' + id).toPromise();
   }
 
   public setDocument(document): Promise<any> {
-    return this.customHttp.post('document-units', document).toPromise();
+    return this.customHttp.post('/document-units', document).toPromise();
   }
 
   public editDocument(document): Promise<any> {
-    return this.customHttp.put('document-units', document).toPromise();
+    return this.customHttp.put('/document-units', document).toPromise();
   }
 
   public deleteDocument(documentId): Promise<any> {
-    return this.customHttp.delete('document-units/' + documentId).toPromise();
+    return this.customHttp.delete('/document-units/' + documentId).toPromise();
   }
 
   public moveDocument(document): Promise<any> {
-    return this.customHttp.put('document-units/move', document).toPromise();
+    return this.customHttp.put('/document-units/move', document).toPromise();
   }
 
   public copyDocument(data): Promise<any> {
-    return this.customHttp.put('document-units/copy', data).toPromise();
+    return this.customHttp.put('/document-units/copy', data).toPromise();
   }
 
   public relateDocument(documentToRelate): Promise<any> {
-    return this.customHttp.put('document-units/relate', documentToRelate).toPromise();
+    return this.customHttp.put('/document-units/relate', documentToRelate).toPromise();
   }
 
   public unrelateDocument(documentToUnrelate): Promise<any> {
-    return this.customHttp.put('document-units/unrelate', documentToUnrelate).toPromise();
+    return this.customHttp.put('/document-units/unrelate', documentToUnrelate).toPromise();
   }
 
   public lock(id): Promise<any> {
-    return this.customHttp.put('document-units/lock/', { id: id }).toPromise();
+    return this.customHttp.put('/document-units/lock/', { id: id }).toPromise();
   }
 
   public unlock(id): Promise<any> {
-    return this.customHttp.put('document-units/unlock/', { id: id }).toPromise();
+    return this.customHttp.put('/document-units/unlock/', { id: id }).toPromise();
   }
 
   // todo: rename to getDocumentUnitVersionOptions or delete where ...., or/and expiration period types
@@ -94,7 +94,7 @@ export class DocumentService {
   }
 
   public getAvailableEFormTemplates(documentId): Promise<any> {
-    return this.customHttp.get('document-units/' + documentId + '/available-e-form-templates').toPromise();
+    return this.customHttp.get('/document-units/' + documentId + '/available-e-form-templates').toPromise();
   }
 
   public getMonitoredUsers(documentId): Promise<any> {
@@ -102,17 +102,17 @@ export class DocumentService {
       return Observable.of([]).toPromise();
     }
 
-    return this.customHttp.get('document-units/' + documentId + '/monitorable-users').toPromise();
+    return this.customHttp.get('/document-units/' + documentId + '/monitorable-users').toPromise();
   }
 
   public monitorDocumentUnit(documentUnit): Promise<any> {
 
-    return this.customHttp.put('document-units/monitor', documentUnit).toPromise();
+    return this.customHttp.put('/document-units/monitor', documentUnit).toPromise();
   }
 
   public unmonitorDocumentUnit(documentUnit): Promise<any> {
 
-    return this.customHttp.put('document-units/unmonitor', documentUnit).toPromise();
+    return this.customHttp.put('/document-units/unmonitor', documentUnit).toPromise();
   }
 
   public getAssignableUsers(documentId): Promise<any> {
@@ -120,17 +120,17 @@ export class DocumentService {
       return Observable.of([]).toPromise();
     }
 
-    return this.customHttp.get('document-units/' + documentId + '/assignable-users').toPromise();
+    return this.customHttp.get('/document-units/' + documentId + '/assignable-users').toPromise();
   }
 
   public assignDocumentUnit(documentUnit): Promise<any> {
 
-    return this.customHttp.put('document-units/assign', documentUnit).toPromise();
+    return this.customHttp.put('/document-units/assign', documentUnit).toPromise();
   }
 
   public unassignDocumentUnit(documentUnit): Promise<any> {
 
-    return this.customHttp.put('document-units/unassign', documentUnit).toPromise();
+    return this.customHttp.put('/document-units/unassign', documentUnit).toPromise();
   }
 
   public getTags(documentId): Promise<any> {
@@ -141,19 +141,19 @@ export class DocumentService {
 
   public addTag(documentUnit): Promise<any> {
 
-    return this.customHttp.put('document-units/tag', documentUnit).toPromise();
+    return this.customHttp.put('/document-units/tag', documentUnit).toPromise();
   }
 
   public removeTag(documentUnit): Promise<any> {
 
-    return this.customHttp.put('document-units/untag', documentUnit).toPromise();
+    return this.customHttp.put('/document-units/untag', documentUnit).toPromise();
   }
 
   public getExpiringDocuments(page, size): Promise<any> {
-    return this.customHttp.get('document-units/expiring?page=' + page + '&count=' + size).toPromise();
+    return this.customHttp.get('/document-units/expiring?page=' + page + '&count=' + size).toPromise();
   }
 
   public getExpiredDocuments(page, size): Promise<any> {
-    return this.customHttp.get('document-units/expired?page=' + page + '&count=' + size).toPromise();
+    return this.customHttp.get('/document-units/expired?page=' + page + '&count=' + size).toPromise();
   }
 }

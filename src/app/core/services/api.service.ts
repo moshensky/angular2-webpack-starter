@@ -11,7 +11,8 @@ export class ApiService {
     'Content-Type': 'application/json',
     Accept: 'application/json'
   });
-  api_url: string = API_URL
+  api_url: string =  `${API_URL}/api`
+  token_url: string = API_URL
 
   constructor(private http: Http) { }
 
@@ -68,7 +69,7 @@ export class ApiService {
     headers.append('Content-Type', 'application/json');
     headers.append('Authorization', 'Basic ' + encodedData);
 
-    return this.http.get(`${this.api_url}${path}`, { headers: headers })
+    return this.http.get(`${this.token_url}${path}`, { headers: headers })
       .map(this.checkForError)
       .catch(err => Observable.throw(err))
       .map(this.getJson)
